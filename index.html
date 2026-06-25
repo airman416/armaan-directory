@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Armaan Agrawal — Directory</title>
+  <meta name="description" content="Everything Armaan Agrawal has built, written, and shipped." />
+  <link rel="stylesheet" href="https://use.typekit.net/kyi7jre.css" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0 !important;
+    }
+
+    :root {
+      --green: #06402B;
+      --black: #161717;
+      --white: #FFFFFF;
+      --gray-700: #374151;
+      --gray-500: #6B7280;
+      --gray-200: #E5E7EB;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'abril-display', serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: rgba(6, 64, 43, 0.2);
+      color: inherit;
+    }
+
+    .nav-initials {
+      position: fixed;
+      top: 1.5rem;
+      left: 1.5rem;
+      z-index: 50;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--black);
+      text-decoration: none;
+    }
+    .nav-initials:hover { opacity: 0.7; }
+
+    main {
+      width: 100%;
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+
+    .hero { margin-bottom: 3rem; }
+
+    .hero-photo {
+      display: block;
+      width: 9rem;
+      height: 12rem;
+      object-fit: cover;
+      object-position: center top;
+      margin-bottom: 1.25rem;
+      filter: grayscale(15%);
+      transition: filter 0.4s ease;
+    }
+    .hero-photo:hover { filter: grayscale(0%); }
+
+    .hero h1 {
+      font-size: clamp(1.5rem, 3vw, 1.875rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .hero p { font-size: 1rem; color: var(--gray-700); }
+
+    .section-label {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--black);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      gap: 0;
+      margin-bottom: 3rem;
+      border-top: 1px solid var(--gray-200);
+      border-left: 1px solid var(--gray-200);
+    }
+
+    .card {
+      display: block;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      border-right: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+      transition: background 0.3s ease;
+      position: relative;
+    }
+    .card:hover { background: rgba(6, 64, 43, 0.04); }
+
+    .card-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.25rem;
+      text-decoration: underline;
+      text-decoration-color: rgba(6, 64, 43, 0.2);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      transition: text-decoration-color 0.3s ease;
+    }
+    .card:hover .card-name {
+      text-decoration-color: var(--green);
+      color: var(--green);
+    }
+
+    .card-desc {
+      font-size: 0.875rem;
+      color: var(--gray-700);
+      line-height: 1.5;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+    }
+
+    .card-for {
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      color: var(--green);
+      opacity: 0.8;
+    }
+    .card-for::before {
+      content: 'for ';
+      opacity: 0.6;
+    }
+
+    .card::after {
+      content: '→';
+      position: absolute;
+      top: 1.5rem;
+      right: 1.25rem;
+      font-size: 0.875rem;
+      color: var(--green);
+      opacity: 0;
+      transform: translateX(-4px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+    .card:hover::after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+      font-size: 0.875rem;
+    }
+    .footer-links a {
+      color: var(--black);
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--green); }
+
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+      main { padding: 4rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://armaanagrawal.com" class="nav-initials">A.A.</a>
+
+  <main>
+
+    <section class="hero">
+      <img class="hero-photo" src="https://pub-8c3cb37dcf064449a354151a885b5892.r2.dev/image.jpg" alt="Armaan Agrawal" />
+      <h1>Armaan Agrawal</h1>
+      <p>Everything I've built, written, and shipped.</p>
+    </section>
+
+    <!-- Writing -->
+    <section>
+      <h2 class="section-label">Writing</h2>
+      <div class="grid">
+
+        <a href="https://essays.armaanagrawal.com" class="card">
+          <div class="card-name">Essays</div>
+          <div class="card-desc">Thinking out loud — on boredom, AI homogenization, entropy, and why schools will disappear.</div>
+          <div class="card-footer"><span class="card-tag">blog</span></div>
+        </a>
+
+        <a href="https://wrapped.armaanagrawal.com" class="card">
+          <div class="card-name">Year in Review</div>
+          <div class="card-desc">2025–2026 retrospective: commits, projects, chapters, and growth observations.</div>
+          <div class="card-footer"><span class="card-tag">retrospective</span></div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Helm Labs -->
+    <section>
+      <h2 class="section-label">Helm Labs</h2>
+      <div class="grid">
+
+        <a href="https://agency.armaanagrawal.com" class="card">
+          <div class="card-name">Agency</div>
+          <div class="card-desc">Bespoke AI strategy and software — ship a working V1 prototype in 1–2 weeks, $1k–$5k entry sprint.</div>
+          <div class="card-footer"><span class="card-tag">consulting</span></div>
+        </a>
+
+        <a href="https://helmlabs.armaanagrawal.com" class="card">
+          <div class="card-name">Creator Partnership</div>
+          <div class="card-desc">Build your app for free in exchange for equity — design, dev, and App Store launch handled end-to-end.</div>
+          <div class="card-footer"><span class="card-tag">equity partnership</span></div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Software -->
+    <section>
+      <h2 class="section-label">Software</h2>
+      <div class="grid">
+
+        <a href="https://content.armaanagrawal.com" class="card">
+          <div class="card-name">Content Engine</div>
+          <div class="card-desc">AI-powered social copilot that repurposes your content across X, LinkedIn, and Instagram from one source feed.</div>
+          <div class="card-footer">
+            <span class="card-tag">tool</span>
+            <span class="card-for">Sam Parr / Hampton</span>
+          </div>
+        </a>
+
+        <a href="https://samparr.armaanagrawal.com" class="card">
+          <div class="card-name">SamGPT</div>
+          <div class="card-desc">Semantic search through every Sam Parr quote from My First Million — find clips, ideas, and predictions.</div>
+          <div class="card-footer">
+            <span class="card-tag">ai · search</span>
+          </div>
+        </a>
+
+        <a href="https://owner.armaanagrawal.com" class="card">
+          <div class="card-name">Owner Review Analyzer</div>
+          <div class="card-desc">Analyze Google reviews for any restaurant — understand what bad reviews are costing you.</div>
+          <div class="card-footer">
+            <span class="card-tag">tool</span>
+            <span class="card-for">owner.com</span>
+          </div>
+        </a>
+
+        <a href="https://openpcf.armaanagrawal.com" class="card">
+          <div class="card-name">OpenPCF Sandbox</div>
+          <div class="card-desc">Upload a Bill of Materials CSV and calculate your product's carbon footprint — fuzzy matching included.</div>
+          <div class="card-footer">
+            <span class="card-tag">climate · tool</span>
+            <span class="card-for">Terralytiq</span>
+          </div>
+        </a>
+
+        <a href="https://tsa.armaanagrawal.com" class="card">
+          <div class="card-name">Frontier OS</div>
+          <div class="card-desc">Learning science platform for baseball development and athlete accountability.</div>
+          <div class="card-footer">
+            <span class="card-tag">sports tech</span>
+            <span class="card-for">Alpha School</span>
+          </div>
+        </a>
+
+        <a href="https://carousels.armaanagrawal.com" class="card">
+          <div class="card-name">CMachine</div>
+          <div class="card-desc">Create social media carousels and narrated video slides — high-impact, viral-ready content.</div>
+          <div class="card-footer"><span class="card-tag">tool · social</span></div>
+        </a>
+
+        <a href="https://repoog.fly.dev" class="card">
+          <div class="card-name">Repoog</div>
+          <div class="card-desc">AI-generated Open Graph images for GitHub repositories — instant visual identity for any repo.</div>
+          <div class="card-footer"><span class="card-tag">tool · ai</span></div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section>
+      <h2 class="section-label">Resume</h2>
+      <div class="grid">
+
+        <a href="https://resume.armaanagrawal.com" class="card">
+          <div class="card-name">Resume / Portfolio</div>
+          <div class="card-desc">Personal site — background, projects, and contact.</div>
+          <div class="card-footer"><span class="card-tag">personal site</span></div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="section-label">Projects</h2>
+      <div class="grid">
+
+        <a href="https://matchmaking.armaanagrawal.com" class="card">
+          <div class="card-name">Matchmaking</div>
+          <div class="card-desc">Student-run matchmaking event for Northeastern undergrads — apply, get manually matched, meet in person.</div>
+          <div class="card-footer"><span class="card-tag">event · neu</span></div>
+        </a>
+
+        <a href="https://recipes.armaanagrawal.com" class="card">
+          <div class="card-name">Blueprint Recipes</div>
+          <div class="card-desc">All 21 Bryan Johnson Blueprint Protocol recipes — filterable by meal, with ingredients list.</div>
+          <div class="card-footer"><span class="card-tag">longevity · food</span></div>
+        </a>
+
+      </div>
+    </section>
+
+    <nav class="footer-links">
+      <a href="https://x.com/airman416" target="_blank" rel="noopener">𝕏</a>
+      <a href="https://linkedin.com/in/agr1" target="_blank" rel="noopener">in</a>
+      <a href="https://tiktok.com/@armaanagrawal5" target="_blank" rel="noopener">♪</a>
+      <a href="https://armaanagrawal.com/resume.pdf" download>↓ Resume</a>
+    </nav>
+
+  </main>
+
+<script data-goatcounter="https://armaanagrawal.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
